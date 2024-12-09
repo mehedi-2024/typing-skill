@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .kbd {
+            padding: 12px 10px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container bg-gradient-to-br from-indigo-400 to-indigo-700 w-screen h-screen">
+        <section class="" id="sec1">
+            <div class="flex flex-col items-center justify-center h-screen">
+                <h1 class="text-5xl font-extrabold text-white text-center mb-10">Show Your Typing Skill</h1>
+                <div class="btn bg-white border-none text-2xl text-black font-bold hover:bg-gray-400" id="start">Start</div>
+            </div>
+        </section>
+
+        <section class="hidden" id="sec2">
+            <div id="display"
+                class="w-full h-[35vh] border-8 border-solid border-indigo-200 p-4 text-justify text-black text-xl font-semibold bg-[#ffffff39]">
+            </div>
+            <div class="text-center text-3xl font-bold text-white my-10">00 : <span id="timer">00</span></div>
+            <div class="flex justify-evenly mt-12 mb-32">
+                <div class="p-5 rounded-md bg-[#ffffff22] text-white font-bold">max-score : <span id="max-score"></span>
+                </div>
+                <div class="p-5 rounded-md bg-[#ffffff22] text-white font-bold">your-score : <span
+                        id="your-score"></span></div>
+            </div>
+            <!-- keyboard -->
+            <div id="keyboard">
+                <div class="my-1 flex w-full justify-center gap-1">
+                    <kbd id="q" class="kbd">q</kbd>
+                    <kbd id="w" class="kbd">w</kbd>
+                    <kbd id="e" class="kbd">e</kbd>
+                    <kbd id="r" class="kbd">r</kbd>
+                    <kbd id="t" class="kbd">t</kbd>
+                    <kbd id="y" class="kbd">y</kbd>
+                    <kbd id="u" class="kbd">u</kbd>
+                    <kbd id="i" class="kbd">i</kbd>
+                    <kbd id="o" class="kbd">o</kbd>
+                    <kbd id="p" class="kbd">p</kbd>
+                </div>
+                <div class="my-1 flex w-full justify-center gap-1">
+                    <kbd id="a" class="kbd">a</kbd>
+                    <kbd id="s" class="kbd">s</kbd>
+                    <kbd id="d" class="kbd">d</kbd>
+                    <kbd id="f" class="kbd">f</kbd>
+                    <kbd id="g" class="kbd">g</kbd>
+                    <kbd id="h" class="kbd">h</kbd>
+                    <kbd id="j" class="kbd">j</kbd>
+                    <kbd id="k" class="kbd">k</kbd>
+                    <kbd id="l" class="kbd">l</kbd>
+                </div>
+                <div class="my-1 flex w-full justify-center gap-1">
+                    <kbd id="z" class="kbd">z</kbd>
+                    <kbd id="x" class="kbd">x</kbd>
+                    <kbd id="c" class="kbd">c</kbd>
+                    <kbd id="v" class="kbd">v</kbd>
+                    <kbd id="b" class="kbd">b</kbd>
+                    <kbd id="n" class="kbd">n</kbd>
+                    <kbd id="m" class="kbd">m</kbd>
+                    <kbd id=" " class="kbd"> </kbd>
+                </div>
+            </div>
+        </section>
+
+        <section class="h-full hidden" id="sec3">
+            <div class="h-full grid place-content-center">
+                <div class="flex flex-col items-center gap-5 bg-[#ffffff41] rounded-xl p-10">
+                    <h1 class="text-white text-3xl font-semibold">Your score is : <span id="final-score">000</span></h1>
+                    <button id="go-home" class="btn w-fit text-black bg-white border-none text-2xl font-bold hover:text-white">Go
+                        Home</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
